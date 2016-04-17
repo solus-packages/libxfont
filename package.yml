@@ -1,0 +1,30 @@
+name        : libxfont
+version     : 1.5.1
+release     : 8
+source      :
+    - http://xorg.freedesktop.org/archive/individual/lib/libXfont-1.5.1.tar.gz : 7c65c8ac581a162ff4c8cd86c1db9e9f425132eb65b1cba0c9e905c6cb8a45f5
+license     :
+    - MIT
+summary     : X11 font rasterisation library
+component   : xorg.library
+builddeps   :
+    - pkgconfig(fontsproto)
+    - pkgconfig(x11)
+    - pkgconfig32(x11)
+    - pkgconfig(xtrans)
+    - pkgconfig(fontenc)
+    - pkgconfig32(fontenc)
+    - pkgconfig32(zlib)
+    - pkgconfig32(freetype2)
+    - glibc-32bit-devel
+    - libgcc-32bit
+emul32      : yes
+optimize    : speed
+description : |
+    libXfont provides various services for X servers, most notably font selection and rasterisation (through external libraries).
+setup      : |
+    %configure --disable-static
+build      : |
+    %make
+install    : |
+    %make_install
