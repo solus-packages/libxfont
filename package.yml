@@ -1,6 +1,6 @@
 name       : libxfont
 version    : 1.5.4
-release    : 14
+release    : 15
 source     :
     - https://www.x.org/releases/individual/lib/libXfont-1.5.4.tar.gz : 59be6eab53f7b0feb6b7933c11d67d076ae2c0fd8921229c703fc7a4e9a80d6e
 license    : MIT
